@@ -24,16 +24,16 @@ print("Lets Check How Lucky You Are  Wish You All The Best")
 sleep(2)
 print("Loading---")
 sleep(2)
-
 print("Still Loading---")
 sleep(2)
 print(
-    "So You Are Still Here Not Gone I Gave You Chance But No Problem May Be You Trust Your Fortune A Lot \n Lets Begin Then"
+    "So You Are Still Here! I Gave You A Chance But No Problem, Maybe You Really Trust Your Fortune \n Lets Begin Then!"
 )
 sleep(2)
 d_cards = []  # Initialising dealer's cards
 p_cards = []  # Initialising player's cards
 sleep(2)
+
 while len(d_cards) != 2:
     random.shuffle(deck)
     d_cards.append(deck.pop())
@@ -72,17 +72,17 @@ def dealer_choice():
             random.shuffle(deck)
             d_cards.append(deck.pop())
 
-    print("Dealer has total " + str(sum(d_cards)) + "with the cards ", d_cards)
+    print("Dealer has a total of " + str(sum(d_cards)) + "with the cards ", d_cards)
 
     if sum(p_cards) == sum(d_cards):
-        print(f"{'*'*15}The match is tie !!{'*'*15}")
+        print(f"{'*'*15}The match is a tie !!{'*'*15}")
         exit()
 
     if sum(d_cards) == 21:
         if sum(p_cards) < 21:
             print(f"{'*'*23}Dealer is the Winner !!{'*'*18}")
         elif sum(p_cards) == 21:
-            print(f"{'*'*20}There is tie !!{'*'*26}")
+            print(f"{'*'*20}There is a tie !!{'*'*26}")
         else:
             print(f"{'*'*23}Dealer is the Winner !!{'*'*18}")
 
@@ -90,15 +90,15 @@ def dealer_choice():
         if sum(p_cards) < 21 and sum(p_cards) < sum(d_cards):
             print(f"{'*'*23}Dealer is the Winner !!{'*'*18}")
         if sum(p_cards) == 21:
-            print(f"{'*'*22}Player is winner !!{'*'*22}")
+            print(f"{'*'*22}Player is the winner !!{'*'*22}")
         if 21 > sum(p_cards) > sum(d_cards):
-            print(f"{'*'*22}Player is winner !!{'*'*22}")
+            print(f"{'*'*22}Player is the winner !!{'*'*22}")
 
     else:
         if sum(p_cards) < 21:
-            print(f"{'*'*22}Player is winner !!{'*'*22}")
+            print(f"{'*'*22}Player is the winner !!{'*'*22}")
         elif sum(p_cards) == 21:
-            print(f"{'*'*22}Player is winner !!{'*'*22}")
+            print(f"{'*'*22}Player is the winner !!{'*'*22}")
         else:
             print(f"{'*'*23}Dealer is the Winner !!{'*'*18}")
 
